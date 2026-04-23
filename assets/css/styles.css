@@ -1,5 +1,30 @@
-/* styles.css */
+body {
+  background-color: #000;
+  color: #9adfff;
+  font-family: monospace;
+}
 
-* {
-	font-family: Arial;
+.title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.links p {
+  margin: 10px 0;
 }
