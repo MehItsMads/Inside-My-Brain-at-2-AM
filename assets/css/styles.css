@@ -1,13 +1,16 @@
-body { background: #070711; 
-      color: #9adfff; 
-      font-family: monospace; 
-      overflow-x: hidden; 
+body {
+  background: #070711;
+  color: #9adfff;
+  font-family: monospace;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
+  z-index: 0;
 
   background:
     radial-gradient(circle at 12% 18%, rgba(255, 0, 180, 0.10), transparent 40%),
@@ -25,26 +28,39 @@ body::before {
   pointer-events: none;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 120px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 200px 200px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 350px 150px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 500px 300px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 650px 100px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 800px 250px, rgba(255,255,255,0.7), transparent);
+
+  background-size: 900px 400px;
+  opacity: 0.25;
+
+  animation: starDrift 80s linear infinite;
+}
+
 @keyframes driftChaos {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
+  0% { transform: translate(0px, 0px) scale(1); }
+  25% { transform: translate(-40px, 30px) scale(1.05); }
+  50% { transform: translate(30px, -50px) scale(0.98); }
+  75% { transform: translate(-20px, -30px) scale(1.02); }
+  100% { transform: translate(50px, 20px) scale(1); }
+}
 
-  25% {
-    transform: translate(-40px, 30px) scale(1.05);
-  }
-
-  50% {
-    transform: translate(30px, -50px) scale(0.98);
-  }
-
-  75% {
-    transform: translate(-20px, -30px) scale(1.02);
-  }
-
-  100% {
-    transform: translate(50px, 20px) scale(1);
-  }
+@keyframes starDrift {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-200px); }
 }
 
 .title {
@@ -63,21 +79,18 @@ body::before {
 .subtitle {
   color: #ccc;
   margin-bottom: 30px;
-
   text-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
 a {
   color: #66ccff;
   text-decoration: none;
-
   transition: 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
   color: #ffffff;
-
   text-shadow:
     0 0 8px rgba(102,204,255,0.8),
     0 0 15px rgba(255,255,255,0.5);
