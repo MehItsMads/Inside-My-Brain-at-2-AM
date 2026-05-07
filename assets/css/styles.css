@@ -1,7 +1,18 @@
 body {
-  background-color: #000;
+  background-color: #0d0d14;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(255,0,180,0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(0,200,255,0.15), transparent 30%);
+
+  background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+
   color: #9adfff;
   font-family: monospace;
+
+  overflow-x: hidden;
 }
 
 .title {
