@@ -86,6 +86,16 @@ body::after {
   to { transform: translateY(-300px); }
 }
 
+.page {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
 .title {
   font-size: 3rem;
   letter-spacing: 2px;
