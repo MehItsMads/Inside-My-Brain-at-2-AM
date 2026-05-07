@@ -1,31 +1,11 @@
 body {
-  background-color: #070711;
-
-  background-image:
-    radial-gradient(white 1px, transparent 1px),
-    radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-    radial-gradient(rgba(0,200,255,0.4) 2px, transparent 2px),
-    radial-gradient(rgba(255,0,180,0.3) 2px, transparent 2px);
-
-  background-size:
-    120px 120px,
-    200px 200px,
-    350px 350px,
-    500px 500px;
-
-  background-position:
-    0 0,
-    40px 60px,
-    130px 200px,
-    300px 100px;
-
+ body {
+  background: #070711;
   color: #9adfff;
   font-family: monospace;
-
   overflow-x: hidden;
 }
 
-/* dreamy floating glow */
 body::before {
   content: "";
   position: fixed;
