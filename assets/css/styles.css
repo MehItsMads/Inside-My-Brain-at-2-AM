@@ -47,7 +47,7 @@ body::after {
     radial-gradient(1px 1px at 55% 15%, rgba(150,0,255,0.6), transparent);
 
   background-size: 1000px 700px;
-  opacity: 0.55;
+  opacity: 0.95;
 
   animation: starDrift 80s linear infinite;
 }
