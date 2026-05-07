@@ -1,6 +1,6 @@
 body {
-  background: #070711;
-  color: #9adfff;
+  background: #0e0f1a;
+  color: #b7e6ff;
   font-family: monospace;
   overflow-x: hidden;
   position: relative;
@@ -13,14 +13,14 @@ body::before {
   z-index: 0;
 
   background:
-    radial-gradient(circle at 12% 18%, rgba(255, 0, 180, 0.18), transparent 45%),
-    radial-gradient(circle at 78% 22%, rgba(0, 200, 255, 0.16), transparent 50%),
-    radial-gradient(circle at 35% 75%, rgba(180, 0, 255, 0.14), transparent 55%),
-    radial-gradient(circle at 90% 70%, rgba(0, 255, 200, 0.10), transparent 60%),
-    radial-gradient(circle at 55% 40%, rgba(255, 80, 80, 0.10), transparent 60%);
+    radial-gradient(circle at 15% 20%, rgba(255, 120, 220, 0.22), transparent 50%),
+    radial-gradient(circle at 80% 25%, rgba(120, 220, 255, 0.20), transparent 55%),
+    radial-gradient(circle at 40% 70%, rgba(190, 140, 255, 0.18), transparent 60%),
+    radial-gradient(circle at 70% 80%, rgba(120, 255, 210, 0.12), transparent 60%),
+    radial-gradient(circle at 50% 40%, rgba(255, 140, 140, 0.12), transparent 65%);
 
-  filter: blur(35px);
-  opacity: 1;
+  filter: blur(30px);
+  opacity: 0.45;
 
   animation: driftChaos 35s ease-in-out infinite alternate;
 
